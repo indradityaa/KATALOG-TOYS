@@ -42,106 +42,152 @@
   <!-- Detail Produk -->
   <div class="detail-produk" id="detail-produk">
     <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html">Beranda</a>
-        <span>/</span>
-        <a href="index.html#produk">Produk</a>
-        <span>/</span>
-        <span>Headset Gaming RGB</span>
-      </div>
+      <h1 class="page-title">All products</h1>
 
       <div class="detail-container">
-        <!-- Left Section: Gallery -->
-        <div class="product-gallery" data-aos="fade-right" data-aos-duration="1000">
-          <div class="main-image">
-            <img id="mainImg" src="./assets/images/headset1.png" alt="Headset Gaming">
-          </div>
-          <div class="thumbnail-images">
-            <img src="./assets/images/headset1.png" class="thumb active" onclick="changeImage(this)">
-            <img src="./assets/images/keyboard1.png" class="thumb" onclick="changeImage(this)">
-            <img src="./assets/images/mouse1.png" class="thumb" onclick="changeImage(this)">
-            <img src="./assets/images/monitor1.png" class="thumb" onclick="changeImage(this)">
-          </div>
-        </div>
+        <!-- Sidebar Filter -->
+        <aside class="sidebar-filter">
+          <h3>Browse by</h3>
+          <ul class="filter-list">
+            <li><a href="#" class="active">All products</a></li>
+            <li><a href="#">AB TOYS / AB</a></li>
+            <li><a href="#">ACADEMY / CADEMY</a></li>
+            <li><a href="#">COOL TOYS / CT</a></li>
+            <li><a href="#">OTHERS</a></li>
+            <li><a href="#">SPAREPARTS / PART UPGRADE</a></li>
+            <li><a href="#">ZHENGSANGTAI / ZST</a></li>
+          </ul>
+        </aside>
 
-        <!-- Right Section: Product Info -->
-        <div class="product-info" data-aos="fade-left" data-aos-duration="1000">
-          <div class="product-badge">Terlaris</div>
-          <h1 class="product-title">Headset Gaming RGB Pro Series</h1>
+        <!-- Main Content -->
+        <div class="main-content">
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search products">
+          </div>
 
-          <div class="product-rating">
-            <div class="stars">
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-fill"></i>
-              <i class="ri-star-half-fill"></i>
+          <!-- Products Info -->
+          <div class="products-info">
+            <span>61 products</span>
+            <div class="sort-by">
+              <label>Sort by:</label>
+              <select>
+                <option>Default</option>
+                <option>Harga Terendah</option>
+                <option>Harga Tertinggi</option>
+                <option>Terbaru</option>
+              </select>
             </div>
-            <span class="rating-text">4.5 (328 ulasan)</span>
           </div>
 
-          <div class="product-price">
-            <span class="price-current">Rp 450.000</span>
-            <span class="price-original">Rp 750.000</span>
-            <span class="price-discount">40% OFF</span>
-          </div>
-
-          <div class="product-description">
-            <p>Headset gaming profesional dengan teknologi 7.1 surround sound yang memberikan pengalaman audio immersive. Dilengkapi dengan RGB lighting yang dapat dikustomisasi dan microphone noise cancelling untuk komunikasi yang jernih.</p>
-          </div>
-
-          <div class="product-quantity">
-            <label>Jumlah:</label>
-            <div class="quantity-selector">
-              <button class="qty-btn" onclick="decreaseQty()">-</button>
-              <input type="number" id="qty" value="1" min="1" max="99" readonly>
-              <button class="qty-btn" onclick="increaseQty()">+</button>
-            </div>
-            <span class="stock-info">Stok tersedia: 127 unit</span>
-          </div>
-
-          <div class="product-actions">
-            <button class="btn-primary">
-              <i class="ri-shopping-cart-line"></i>
-              Tambah ke Keranjang
-            </button>
-            <button class="btn-secondary">
-              <i class="ri-shopping-bag-3-line"></i>
-              Beli Sekarang
-            </button>
-            <button class="btn-wishlist">
-              <i class="ri-heart-line"></i>
-            </button>
-          </div>
-
-          <div class="product-features">
-            <div class="feature-item">
-              <i class="ri-truck-line"></i>
-              <div>
-                <strong>Gratis Ongkir</strong>
-                <p>Minimal pembelian Rp 100.000</p>
+          <!-- Product Grid -->
+          <div class="product-grid">
+            <!-- Product Item 1 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/keyboard1.png" alt="Product">
+                <span class="badge-new">NEW</span>
+              </div>
+              <h3>ZSTQ2A , ZHENGSANGTAI Q2 TAN Cokelat Gurun + SBAL PL P226 New Batch 2025</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 448.500</span>
+                <span class="price-new">Rp 390.000</span>
               </div>
             </div>
-            <div class="feature-item">
-              <i class="ri-shield-check-line"></i>
-              <div>
-                <strong>Garansi Resmi</strong>
-                <p>1 tahun garansi manufaktur</p>
+
+            <!-- Product Item 2 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/keyboard2.png" alt="Product">
+                <span class="badge-new">NEW</span>
+              </div>
+              <h3>ZSTQ7A , ZHENGSANGTAI Q7 TAN Cokelat Gurun Hi-Capa 2011 TTI Combat Master New Batch 2025</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 333.500</span>
+                <span class="price-new">Rp 290.000</span>
               </div>
             </div>
-            <div class="feature-item">
-              <i class="ri-swap-line"></i>
-              <div>
-                <strong>Retur Mudah</strong>
-                <p>14 hari pengembalian</p>
+
+            <!-- Product Item 3 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/mouse1.png" alt="Product">
+              </div>
+              <h3>CT1908-B , Cool Toys CT Colt 1908 .25 ACP New Batch 2025</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 153.400</span>
+                <span class="price-new">Rp 130.000</span>
+              </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/mouse2.png" alt="Product">
+              </div>
+              <h3>CT1908-S , Cool Toys CT Colt 1908 .25 ACP SILVER New Batch 2025</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 153.400</span>
+                <span class="price-new">Rp 130.000</span>
+              </div>
+            </div>
+
+            <!-- Product Item 5 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/monitor1.png" alt="Product">
+                <span class="badge-new">NEW</span>
+              </div>
+              <h3>Model Kits Bundle Set - Academy DIY Building Toys</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 299.000</span>
+                <span class="price-new">Rp 250.000</span>
+              </div>
+            </div>
+
+            <!-- Product Item 6 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/monitor2.png" alt="Product">
+              </div>
+              <h3>Metal Slide Upgrade Kit - Premium Quality</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 450.000</span>
+                <span class="price-new">Rp 390.000</span>
+              </div>
+            </div>
+
+            <!-- Product Item 7 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/headset1.png" alt="Product">
+              </div>
+              <h3>RGB Gaming Headset Pro Series - 7.1 Surround Sound</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 750.000</span>
+                <span class="price-new">Rp 450.000</span>
+              </div>
+            </div>
+
+            <!-- Product Item 8 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="./assets/images/keyboard3.png" alt="Product">
+                <span class="badge-new">NEW</span>
+              </div>
+              <h3>Mechanical Keyboard RGB - Blue Switch Premium</h3>
+              <div class="product-price-box">
+                <span class="price-old">Rp 890.000</span>
+                <span class="price-new">Rp 690.000</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Product Details Tabs -->
-      <div class="product-tabs" data-aos="fade-up" data-aos-duration="1000">
+      <!-- Hidden Tabs (not displayed) -->
+      <div class="product-tabs" style="display:none;" data-aos="fade-up" data-aos-duration="1000">
         <div class="tab-buttons">
           <button class="tab-btn active" onclick="showTab('specs')">Spesifikasi</button>
           <button class="tab-btn" onclick="showTab('description')">Deskripsi Lengkap</button>
@@ -357,13 +403,6 @@
         </div>
       </div>
 
-      <!-- Back Button -->
-      <div class="back-button" data-aos="fade-up" data-aos-duration="1000">
-        <a href="index.html#produk">
-          <i class="ri-arrow-left-line"></i>
-          Kembali ke Produk
-        </a>
-      </div>
     </div>
   </div>
   <!-- Detail Produk -->
