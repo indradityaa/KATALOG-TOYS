@@ -40,37 +40,329 @@
   <!-- Navbar -->
 
   <!-- Detail Produk -->
-  <div class="produk" id="produk">
+  <div class="detail-produk" id="detail-produk">
     <div class="container">
-      <div class="produk-box">
-        <h1 data-aos="fade-up" data-aos-duration="1000">Detail Produk</h1>
-        <div class="detail-box" data-aos="fade-up" data-aos-duration="1000">
-          <img src="./assets/images/headset1.png" alt="Headset Gaming" style="max-width:400px; border-radius:10px;">
-          <h2 style="margin-top:20px; color:rebeccapurple;">Headset Gaming RGB</h2>
-          <p class="price" style="font-weight:bold; color:#e63946;">Rp 450.000</p>
-          <p>Headset gaming dengan kualitas suara surround sound dan lampu RGB untuk pengalaman bermain yang lebih seru.</p>
-          <p><b>Spesifikasi:</b></p>
-          <ul style="text-align:left; display:inline-block; margin-top:10px;">
-            <li>Koneksi USB</li>
-            <li>Microphone Noise Cancelling</li>
-            <li>RGB Lighting Custom</li>
-            <li>Kompatibel: PC, Laptop</li>
-          </ul>
+      <div class="breadcrumb">
+        <a href="index.html">Beranda</a>
+        <span>/</span>
+        <a href="index.html#produk">Produk</a>
+        <span>/</span>
+        <span>Headset Gaming RGB</span>
+      </div>
 
-          <!-- Video YouTube -->
-          <div class="video-container" style="margin-top:20px;">
-            <iframe width="560" height="315" 
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
+      <div class="detail-container">
+        <!-- Left Section: Gallery -->
+        <div class="product-gallery" data-aos="fade-right" data-aos-duration="1000">
+          <div class="main-image">
+            <img id="mainImg" src="./assets/images/headset1.png" alt="Headset Gaming">
+          </div>
+          <div class="thumbnail-images">
+            <img src="./assets/images/headset1.png" class="thumb active" onclick="changeImage(this)">
+            <img src="./assets/images/keyboard1.png" class="thumb" onclick="changeImage(this)">
+            <img src="./assets/images/mouse1.png" class="thumb" onclick="changeImage(this)">
+            <img src="./assets/images/monitor1.png" class="thumb" onclick="changeImage(this)">
+          </div>
+        </div>
+
+        <!-- Right Section: Product Info -->
+        <div class="product-info" data-aos="fade-left" data-aos-duration="1000">
+          <div class="product-badge">Terlaris</div>
+          <h1 class="product-title">Headset Gaming RGB Pro Series</h1>
+
+          <div class="product-rating">
+            <div class="stars">
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-fill"></i>
+              <i class="ri-star-half-fill"></i>
+            </div>
+            <span class="rating-text">4.5 (328 ulasan)</span>
           </div>
 
-          <!-- Tombol Kembali -->
-          <br>
-          <a href="index.html#produk" style="text-decoration:none; background:rebeccapurple; color:white; padding:10px 20px; border-radius:5px;">← Kembali</a>
+          <div class="product-price">
+            <span class="price-current">Rp 450.000</span>
+            <span class="price-original">Rp 750.000</span>
+            <span class="price-discount">40% OFF</span>
+          </div>
+
+          <div class="product-description">
+            <p>Headset gaming profesional dengan teknologi 7.1 surround sound yang memberikan pengalaman audio immersive. Dilengkapi dengan RGB lighting yang dapat dikustomisasi dan microphone noise cancelling untuk komunikasi yang jernih.</p>
+          </div>
+
+          <div class="product-quantity">
+            <label>Jumlah:</label>
+            <div class="quantity-selector">
+              <button class="qty-btn" onclick="decreaseQty()">-</button>
+              <input type="number" id="qty" value="1" min="1" max="99" readonly>
+              <button class="qty-btn" onclick="increaseQty()">+</button>
+            </div>
+            <span class="stock-info">Stok tersedia: 127 unit</span>
+          </div>
+
+          <div class="product-actions">
+            <button class="btn-primary">
+              <i class="ri-shopping-cart-line"></i>
+              Tambah ke Keranjang
+            </button>
+            <button class="btn-secondary">
+              <i class="ri-shopping-bag-3-line"></i>
+              Beli Sekarang
+            </button>
+            <button class="btn-wishlist">
+              <i class="ri-heart-line"></i>
+            </button>
+          </div>
+
+          <div class="product-features">
+            <div class="feature-item">
+              <i class="ri-truck-line"></i>
+              <div>
+                <strong>Gratis Ongkir</strong>
+                <p>Minimal pembelian Rp 100.000</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="ri-shield-check-line"></i>
+              <div>
+                <strong>Garansi Resmi</strong>
+                <p>1 tahun garansi manufaktur</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <i class="ri-swap-line"></i>
+              <div>
+                <strong>Retur Mudah</strong>
+                <p>14 hari pengembalian</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Product Details Tabs -->
+      <div class="product-tabs" data-aos="fade-up" data-aos-duration="1000">
+        <div class="tab-buttons">
+          <button class="tab-btn active" onclick="showTab('specs')">Spesifikasi</button>
+          <button class="tab-btn" onclick="showTab('description')">Deskripsi Lengkap</button>
+          <button class="tab-btn" onclick="showTab('video')">Video Produk</button>
+          <button class="tab-btn" onclick="showTab('reviews')">Ulasan (328)</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Spesifikasi Tab -->
+          <div id="specs" class="tab-panel active">
+            <h3>Spesifikasi Produk</h3>
+            <table class="specs-table">
+              <tr>
+                <td class="spec-label">Tipe Koneksi</td>
+                <td>USB 2.0 / 3.5mm Jack</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Driver</td>
+                <td>50mm Neodymium</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Frekuensi</td>
+                <td>20Hz - 20kHz</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Impedansi</td>
+                <td>32 Ohm</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Microphone</td>
+                <td>Omnidirectional dengan Noise Cancelling</td>
+              </tr>
+              <tr>
+                <td class="spec-label">RGB Lighting</td>
+                <td>16.8 Juta Warna (Customizable)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Panjang Kabel</td>
+                <td>2 meter (braided cable)</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Kompatibilitas</td>
+                <td>PC, Laptop, PS4, PS5, Xbox, Nintendo Switch</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Berat</td>
+                <td>320 gram</td>
+              </tr>
+              <tr>
+                <td class="spec-label">Dimensi</td>
+                <td>20 x 18 x 9 cm</td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- Deskripsi Lengkap Tab -->
+          <div id="description" class="tab-panel">
+            <h3>Deskripsi Lengkap</h3>
+            <div class="full-description">
+              <h4>Tentang Produk</h4>
+              <p>Headset Gaming RGB Pro Series adalah pilihan sempurna untuk para gamer profesional dan enthusiast. Dirancang dengan teknologi audio terkini, headset ini memberikan pengalaman bermain game yang lebih immersive dengan kualitas suara surround 7.1 yang jernih dan detail.</p>
+
+              <h4>Fitur Unggulan:</h4>
+              <ul>
+                <li><strong>Audio Premium:</strong> Driver 50mm neodymium menghasilkan suara bass yang dalam dan treble yang tajam, sempurna untuk mendengar footstep musuh atau efek suara dalam game.</li>
+                <li><strong>RGB Lighting:</strong> 16.8 juta pilihan warna RGB yang dapat dikustomisasi melalui software, sinkronisasi dengan gear gaming lainnya.</li>
+                <li><strong>Microphone Profesional:</strong> Mic omnidirectional dengan teknologi noise cancelling memastikan komunikasi team yang jernih tanpa gangguan.</li>
+                <li><strong>Comfort Design:</strong> Ear cushion berbahan memory foam dan headband adjustable memberikan kenyamanan maksimal untuk gaming marathon.</li>
+                <li><strong>Multi-Platform:</strong> Kompatibel dengan berbagai platform gaming mulai dari PC, Console, hingga Mobile.</li>
+              </ul>
+
+              <h4>Isi Paket:</h4>
+              <ul>
+                <li>1x Headset Gaming RGB Pro Series</li>
+                <li>1x USB Cable (2m)</li>
+                <li>1x 3.5mm Audio Cable (1.5m)</li>
+                <li>1x Y-Splitter Cable</li>
+                <li>1x User Manual</li>
+                <li>1x Kartu Garansi</li>
+              </ul>
+
+              <h4>Catatan:</h4>
+              <p>Software RGB controller dapat diunduh gratis dari website resmi kami. Fitur RGB hanya berfungsi saat menggunakan koneksi USB.</p>
+            </div>
+          </div>
+
+          <!-- Video Tab -->
+          <div id="video" class="tab-panel">
+            <h3>Video Produk</h3>
+            <div class="video-wrapper">
+              <iframe width="100%" height="500"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Video Review Produk" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="video-caption">Video unboxing dan review lengkap dari produk Headset Gaming RGB Pro Series</p>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div id="reviews" class="tab-panel">
+            <h3>Ulasan Pembeli</h3>
+            <div class="review-summary">
+              <div class="rating-overview">
+                <div class="rating-score">4.5</div>
+                <div class="rating-stars">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-half-fill"></i>
+                </div>
+                <div class="rating-count">328 ulasan</div>
+              </div>
+              <div class="rating-bars">
+                <div class="rating-bar-item">
+                  <span>5 <i class="ri-star-fill"></i></span>
+                  <div class="bar"><div class="bar-fill" style="width: 75%"></div></div>
+                  <span>245</span>
+                </div>
+                <div class="rating-bar-item">
+                  <span>4 <i class="ri-star-fill"></i></span>
+                  <div class="bar"><div class="bar-fill" style="width: 15%"></div></div>
+                  <span>49</span>
+                </div>
+                <div class="rating-bar-item">
+                  <span>3 <i class="ri-star-fill"></i></span>
+                  <div class="bar"><div class="bar-fill" style="width: 6%"></div></div>
+                  <span>20</span>
+                </div>
+                <div class="rating-bar-item">
+                  <span>2 <i class="ri-star-fill"></i></span>
+                  <div class="bar"><div class="bar-fill" style="width: 3%"></div></div>
+                  <span>10</span>
+                </div>
+                <div class="rating-bar-item">
+                  <span>1 <i class="ri-star-fill"></i></span>
+                  <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                  <span>4</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews-list">
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <div class="reviewer-avatar">A</div>
+                    <div>
+                      <div class="reviewer-name">Ahmad Rifai</div>
+                      <div class="review-date">15 Februari 2025</div>
+                    </div>
+                  </div>
+                  <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <p>Produk sangat bagus! Suara jernih dan bass mantap. RGB nya juga keren banget bisa custom sesuai selera. Nyaman dipakai berjam-jam. Recommended!</p>
+                </div>
+              </div>
+
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <div class="reviewer-avatar">S</div>
+                    <div>
+                      <div class="reviewer-name">Siti Nurhaliza</div>
+                      <div class="review-date">12 Februari 2025</div>
+                    </div>
+                  </div>
+                  <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-line"></i>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <p>Kualitas audio bagus untuk harga segini. Mic nya juga clear. Cuma agak berat dikit tapi masih oke lah. Overall puas!</p>
+                </div>
+              </div>
+
+              <div class="review-item">
+                <div class="review-header">
+                  <div class="reviewer-info">
+                    <div class="reviewer-avatar">B</div>
+                    <div>
+                      <div class="reviewer-name">Budi Santoso</div>
+                      <div class="review-date">8 Februari 2025</div>
+                    </div>
+                  </div>
+                  <div class="review-stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                  </div>
+                </div>
+                <div class="review-content">
+                  <p>Worth it banget! Packaging rapi, produk ori, garansi resmi. Surround sound nya kerasa banget pas main game FPS. Mantap pokoknya!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back Button -->
+      <div class="back-button" data-aos="fade-up" data-aos-duration="1000">
+        <a href="index.html#produk">
+          <i class="ri-arrow-left-line"></i>
+          Kembali ke Produk
+        </a>
       </div>
     </div>
   </div>
@@ -92,5 +384,8 @@
   <!-- AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>AOS.init();</script>
+
+  <!-- Custom JS -->
+  <script src="./dist/js/script.js"></script>
 </body>
 </html>
