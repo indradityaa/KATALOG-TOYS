@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk</title>
+
+  <!-- font poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+
+  <!-- remix icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-box">
+        <div class="logo">
+          <h1>Ngoding.</h1>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html#beranda">Beranda</a></li>
+          <li><a href="index.html#layanan">Layanan</a></li>
+          <li><a href="index.html#produk">Produk</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+        <i class="ri-menu-3-line ri-2x"></i>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar -->
+
+  <!-- Detail Produk -->
+  <div class="produk" id="produk">
+    <div class="container">
+      <div class="produk-box">
+        <h1 data-aos="fade-up" data-aos-duration="1000">Detail Produk</h1>
+        <div class="detail-box" data-aos="fade-up" data-aos-duration="1000">
+          <img src="./assets/images/headset1.png" alt="Headset Gaming" style="max-width:400px; border-radius:10px;">
+          <h2 style="margin-top:20px; color:rebeccapurple;">Headset Gaming RGB</h2>
+          <p class="price" style="font-weight:bold; color:#e63946;">Rp 450.000</p>
+          <p>Headset gaming dengan kualitas suara surround sound dan lampu RGB untuk pengalaman bermain yang lebih seru.</p>
+          <p><b>Spesifikasi:</b></p>
+          <ul style="text-align:left; display:inline-block; margin-top:10px;">
+            <li>Koneksi USB</li>
+            <li>Microphone Noise Cancelling</li>
+            <li>RGB Lighting Custom</li>
+            <li>Kompatibel: PC, Laptop</li>
+          </ul>
+
+          <!-- Video YouTube -->
+          <div class="video-container" style="margin-top:20px;">
+            <iframe width="560" height="315" 
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Tombol Kembali -->
+          <br>
+          <a href="index.html#produk" style="text-decoration:none; background:rebeccapurple; color:white; padding:10px 20px; border-radius:5px;">← Kembali</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Detail Produk -->
+
+  <!-- Footer -->
+  <div class="footer" id="kontak">
+    <div class="box">
+      <p>&copy; 2025 <span>Ngoding Mastery</span>. All Rights Reserved</p>
+    </div>
+    <div class="box">
+      <i class="ri-whatsapp-fill ri-2x"></i>
+      <i class="ri-facebook-circle-fill ri-2x"></i>
+      <i class="ri-twitter-fill ri-2x"></i>
+    </div>
+  </div>
+  <!-- Footer -->
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
